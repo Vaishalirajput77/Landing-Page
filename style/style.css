@@ -1,0 +1,328 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url( '../img/nature.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    letter-spacing: 2px;
+    font-size: 2em;
+    color:white;
+}
+.menu a {
+    text-decoration: none;
+    color:white;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+.menu a:before{
+    content: ' ';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-bottom: 2px solid indianred;
+    transition: 0.4s linear;
+}
+.menu a:hover::before{
+    width: 90%;
+}
+
+.register a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: indianred;
+    border-radius: 8px;
+}
+.register a:hover{
+    background: transparent;
+    border:1px solid indianred;
+}
+.h-txt{
+    max-width: 650px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+.h-txt span{
+    letter-spacing: 5px;
+}
+.h-txt h1{
+    font-size: 3.5em;
+}
+.h-txt a{
+    text-decoration: none;
+    background: indianred;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    transition: 0.4s;
+ }
+.h-txt a:hover{
+    background: transparent;
+    border:1px solid indianred;
+}
+.heading{
+    margin: 40px;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.section__container {
+  max-width:fit-content;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 1rem;
+}
+.section__subtitle {
+  font-size: 1rem;
+  color:black;
+}
+.destination__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.destination__card {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+}
+.destination__card img {
+  border-radius: 1rem;
+}
+.destination__details {
+  position: absolute;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--extra-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  z-index: 1;
+  transition: 0.3s;
+}
+.destination__card:hover .destination__details {
+  bottom: 1rem;
+}
+.destination__title {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.destination__subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.trip {
+  background-color: var(--secondary-color);
+}
+.trip__container :is(.section__title, .section__subtitle, .view__all) {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.trip__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+}
+.trip__card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+.trip__details {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+ color:black ;
+  cursor: pointer;
+}
+.rating {
+  color: goldenrod;
+}
+.booking__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: black;
+}
+.book__now {
+  text-decoration: none;
+  color:black; 
+  padding: 0.5rem 1.5rem;
+  background: indianred;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.book__now:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color:black;
+  background:indianred;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color:transparent ;
+  border: 1px solid indianred;
+}
+.gallary__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.image__gallary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.gallary__col {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+.gallary__col img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.gallary__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.gallary__content > div {
+  max-width: 400px;
+}
+.gallary__content .section__subtitle {
+  margin-bottom: 2rem;
+}
+.subscribe {
+  background-color: var(--secondary-color);
+}
+.subscribe__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.subscribe__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  background-color: var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+}
+.subscribe__form input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1rem;
+}
+.footer {
+  background-color:#304146;
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  color: white;
+}
+.footer__col h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.footer__col p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__col p:hover {
+  color: indianred;
+}
+.footer__col p span {
+  font-weight: 600;
+}
+.footer__col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: white;
+  border-top: 1px solid var(--text-light);
+}
+
